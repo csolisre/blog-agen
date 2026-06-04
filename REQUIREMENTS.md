@@ -114,13 +114,13 @@ This document defines the requirements for **Blog Agent**, a web-based blogging 
 ### 6.1 Proposed Stack
 | Layer | Technology |
 |-------|-----------|
-| Backend API | [TODO: e.g. Laravel / Node.js / Django] |
-| Frontend | [TODO: e.g. Vue 3 / React / Blade] |
-| Database | [TODO: e.g. MySQL / PostgreSQL] |
-| File Storage | [TODO: e.g. local disk / S3-compatible] |
-| Authentication | JWT |
-| Cache | [TODO: e.g. Redis / in-memory] |
-| Hosting | [TODO: e.g. VPS / cloud provider] |
+| Backend API | Node.js / Express.js (see `ARCHITECTURE.md`) |
+| Frontend | React SPA (see `ARCHITECTURE.md`) |
+| Database | PostgreSQL (see `ARCHITECTURE.md`) |
+| File Storage | Azure Blob Storage + Azure CDN (see `ARCHITECTURE.md`) |
+| Authentication | JWT (short-lived access token + httpOnly refresh cookie) |
+| Cache | [TODO: stakeholder input needed — e.g. Redis / in-memory] |
+| Hosting | Azure (App Service, Static Web Apps, Bicep IaC — see `ARCHITECTURE.md`) |
 
 ---
 
@@ -295,6 +295,7 @@ This document defines the requirements for **Blog Agent**, a web-based blogging 
 - Users have internet connectivity for all features
 - Content is primarily text with supporting images
 - Single language support (English); i18n scaffolding is excluded from the v1 codebase
+- Deployment targets Belgium (Azure West Europe, single-region) — see `ARCHITECTURE.md`
 
 ### 11.2 Constraints
 - Initial release focuses on core functionality
