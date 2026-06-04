@@ -1,7 +1,9 @@
 # Security Policy
 
+> ⚠️ **Stack Reconciliation Required:** This document was drafted for a **Laravel 11 / PHP** stack. `ARCHITECTURE.md` confirms the actual stack is **Node.js / Express / React**. Laravel-specific references (Eloquent, Form Requests, Sanctum, Larastan, Artisan, Composer, Blade) must be replaced with Node.js equivalents (Zod/Joi validation, middleware auth, npm audit, etc.) before this document can be used as an authoritative security reference. See `ARCHITECTURE.md` §Security Architecture for interim Node.js security decisions.
+
 ## Introduction
-This document defines the security posture for the blog application built with Laravel 11. It establishes mandatory security practices for contributors, outlines the project's security boundaries, and provides a placeholder system for unresolved decisions. All developers working on this repository must adhere to these rules.
+This document defines the security posture for the blog application. It establishes mandatory security practices for contributors, outlines the project's security boundaries, and provides a placeholder system for unresolved decisions. All developers working on this repository must adhere to these rules.
 
 ## Reporting a Vulnerability
 If you discover a security vulnerability, please **do not** open a public issue. Instead, email the maintainers at `[TODO: replace with actual security contact email]`. We aim to acknowledge reports within 48 hours and provide a fix timeline within 5 business days. We follow coordinated disclosure and request that you not publicly disclose the vulnerability until a patch is released.
